@@ -1,0 +1,27 @@
+#include<bits/stdc++.h>
+using namespace std;
+int checkHarshad(int n){
+    
+    int sum = 0;
+    int temp = n;
+    
+    while(temp != 0){
+        sum = sum + temp % 10;
+        temp /= 10;
+    }
+    
+    // will return 1 if num is divisible by sum, else 0
+    return n % sum == 0;
+}
+
+int main ()
+{
+    int n;
+    cin>>n;
+    if(checkHarshad(n))
+        cout <<"True";
+    else
+        cout <<"False";
+
+    return 0;
+}
